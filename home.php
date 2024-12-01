@@ -19,6 +19,7 @@ if (!isset($_SESSION['loggedin'])) {
             <h1>Website Title</h1>
             <a href="/phpbeadando/profile.php"><i class="fas fa-user-circle"></i>Profile</a>
             <a href="/phpbeadando/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+            <a href="/phpbeadando/pdf_generator.php">PDF generator</a>
         </div>
     </nav>
     <div class="content">

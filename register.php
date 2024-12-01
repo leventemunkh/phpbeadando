@@ -37,10 +37,20 @@ if ($stmt = $con->prepare('SELECT id FROM accounts WHERE username = ?')) {
             $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
             $stmt->bind_param('sss', $_POST['username'], $password, $_POST['email']);
             $stmt->execute();
-
+    
+            // Get the ID of the newly created account
+            $newUserId = $stmt->insert_id;
+    
+            // Assign labdarugo records to the new user
+            if ($stmt = $con->prepare('UPDATE labdarugo SET felhasznalo_id = ? WHERE felhasznalo_id IS NULL LIMIT 5')) {
+                $stmt->bind_param('i', $newUserId);
+                $stmt->execute();
+            }
+    
             // Automatically log the user in by setting session variables
             $_SESSION['loggedin'] = true; // Match 'loggedin' from home.php
             $_SESSION['name'] = $_POST['username']; // Match 'name' from home.php
+            $_SESSION['id'] = $newUserId; // Store the user ID in the session
 
             // Redirect to the home page
             header('Location: home.php');
