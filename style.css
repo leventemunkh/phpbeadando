@@ -1,0 +1,232 @@
+/* General Styling */
+body {
+  background-color: #f4f7fc;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial,
+    sans-serif;
+  color: #4a536e;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 18px; /* Increase the base font size */
+}
+
+/* Forms Container */
+.forms-container {
+  display: flex;
+  justify-content: space-between; /* Ensure space between forms */
+  align-items: stretch; /* Ensure equal heights */
+  gap: 40px; /* Increase gap between forms */
+  max-width: 1200px; /* Allow for more space for larger forms */
+  margin: 50px auto;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+/* Individual Form Container */
+.forms-container > div {
+  width: 100%;
+  max-width: 450px; /* Increase width of each form */
+  background-color: #ffffff;
+  border-radius: 10px; /* Slightly rounder corners */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px 30px; /* Add more padding for a spacious look */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  min-height: 500px; /* Increase height for better proportions */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.forms-container > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Header */
+.forms-container h1 {
+  font-size: 28px; /* Larger font for headers */
+  color: #3274d6;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Form Styling */
+.forms-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* More spacing between inputs */
+}
+
+.forms-container form label {
+  font-weight: bold;
+  font-size: 16px; /* Larger label text */
+  color: #4a536e;
+}
+
+.forms-container form input[type="text"],
+.forms-container form input[type="password"],
+.forms-container form input[type="email"] {
+  width: 100%;
+  padding: 20px; /* Larger padding for inputs */
+  border: 1px solid #dde1e7;
+  border-radius: 8px; /* Rounder input corners */
+  background-color: #f9f9f9;
+  font-size: 16px; /* Increase input text size */
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.forms-container form input[type="text"]:focus,
+.forms-container form input[type="password"]:focus,
+.forms-container form input[type="email"]:focus {
+  border-color: #3274d6;
+  outline: none;
+  background-color: #ffffff;
+}
+
+.forms-container form input[type="submit"] {
+  width: 100%;
+  padding: 18px; /* Slightly larger buttons */
+  background-color: #3274d6;
+  border: none;
+  border-radius: 8px; /* Rounder button corners */
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px; /* Larger button text */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.forms-container form input[type="submit"]:hover {
+  background-color: #2868c7;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .forms-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .forms-container > div {
+    width: 100%; /* Ensure full width on smaller screens */
+    max-width: none;
+  }
+}
+
+/* General Reset and Styling */
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial,
+    sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f3f4f7;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Navigation Bar */
+.navtop {
+  background-color: #2f3947;
+  height: 60px;
+  width: 100%;
+  position: fixed; /* Make it stick to the top */
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #1d2731;
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.navtop div {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navtop h1 {
+  font-size: 24px;
+  color: #eaebed;
+  margin: 0;
+}
+
+.navtop a {
+  color: #c1c4c8;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.navtop a:hover {
+  color: #eaebed;
+}
+
+/* Content Section */
+.content {
+  max-width: 1200px;
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 24px;
+  color: #4a536e;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e0e3;
+  padding-bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.content p,
+.content div {
+  color: #4a536e;
+  line-height: 1.5;
+  width: 100%;
+}
+
+/* Table Styling for Profile Page */
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.content table td {
+  padding: 15px;
+  border: 1px solid #dee0e4;
+  color: #4a536e;
+  text-align: left;
+}
+
+.content table td:first-child {
+  font-weight: bold;
+  background-color: #f9fafb;
+}

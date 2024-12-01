@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login or Register</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="forms-container">
+      <!-- Login Section -->
+      <div class="login">
+        <h1>Login</h1>
+        <form action="auth.php" method="post" autocomplete="off">
+          <label for="login-username">
+            <i class="fas fa-user"></i>
+          </label>
+          <input
+            type="text"
+            name="username"
+            id="login-username"
+            placeholder="Username"
+            required
+          />
+          <label for="login-password">
+            <i class="fas fa-lock"></i>
+          </label>
+          <input
+            type="password"
+            name="password"
+            id="login-password"
+            placeholder="Password"
+            required
+          />
+          <input type="submit" value="Login" />
+        </form>
+      </div>
+
+      <!-- Register Section -->
+      <div class="register">
+        <h1>Register</h1>
+        <form action="register.php" method="post" autocomplete="off">
+          <label for="register-username">
+            <i class="fas fa-user"></i>
+          </label>
+          <input
+            type="text"
+            name="username"
+            id="register-username"
+            placeholder="Username"
+            required
+          />
+          <label for="register-password">
+            <i class="fas fa-lock"></i>
+          </label>
+          <input
+            type="password"
+            name="password"
+            id="register-password"
+            placeholder="Password"
+            required
+          />
+          <label for="register-email">
+            <i class="fas fa-envelope"></i>
+          </label>
+          <input
+            type="email"
+            name="email"
+            id="register-email"
+            placeholder="Email"
+            required
+          />
+          <input type="submit" value="Register" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
